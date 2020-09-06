@@ -1,5 +1,4 @@
-require 'entity'
+require 'person'
 
-class Client < Entity
-  attr_accessor :name, :ssn
+class Client < Person
 end

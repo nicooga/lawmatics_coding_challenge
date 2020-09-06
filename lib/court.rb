@@ -1,7 +1,7 @@
-require 'securerandom'
-require 'person'
+require 'entity'
 require 'entity/unique_id_mixin'
 
-class Lawyer < Person
+class Court < Entity
   include Entity::UniqueIdMixin
+  attr_accessor :name, :address
 end
