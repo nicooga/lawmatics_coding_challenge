@@ -2,11 +2,9 @@ require 'client'
 
 RSpec.describe Client do
   describe 'constructor' do
-    it 'takes name and ssn' do
+    it 'takes a name and a ssn, and generates a unique id' do
       client = described_class.new(name: 'Some Lawyer', ssn: '123')
-
-      expect(client.name).to eq('Some Lawyer')
-      expect(client.ssn).to eq('123')
+      expect(client).to have_attributes(name: 'Some Lawyer', ssn: '123')
     end
   end
 end

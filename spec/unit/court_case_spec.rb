@@ -12,14 +12,16 @@ RSpec.describe CourtCase do
       date = Time.now
 
       court_case = described_class.new(
+        id: 3,
         client: client,
         lawyer: lawyer,
         court: court,
         date: date,
-        value: 1000
+        value: '1000'
       )
 
       expect(court_case).to have_attributes(
+        id: 3,
         client: client,
         lawyer: lawyer,
         court: court,

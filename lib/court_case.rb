@@ -1,4 +1,9 @@
+require 'entity'
+require 'entity/unique_id_mixin'
+
 class CourtCase < Entity
+  include Entity::UniqueIdMixin
+
   attr_accessor :client, :lawyer, :court, :status, :date, :value
 
   STATUSES = %i[ongoing lost won]
@@ -16,5 +21,9 @@ class CourtCase < Entity
     end
 
     @status = s
+  end
+
+  def value=(v)
+    @value = v.to_i
   end
 end

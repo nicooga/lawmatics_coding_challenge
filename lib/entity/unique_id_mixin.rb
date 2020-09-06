@@ -5,6 +5,6 @@ module Entity::UniqueIdMixin
 
   def initialize(*args)
     super(*args)
-    self.id = SecureRandom.uuid
+    self.id ||= SecureRandom.uuid
   end
 end
